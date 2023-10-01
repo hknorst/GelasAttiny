@@ -2,20 +2,16 @@
 #include <TM1637Display.h>
 
 // Module connection pins (Digital Pins)
-//#define CLK 0  // PB0
-//#define DIO 4  // PB4
-#define CLK 1  // PB2
-#define DIO 2  // PB1
+#define CLK 1  // PB1
+#define DIO 2  // PB2
 
-//#define NTC 1   // PB2
-#define NTC 2   // A2 - PB4
-//#define RELE 1  // PB1
+#define NTC 2   // PB4 - A2
 #define RELE 0  // PB0
 
 #define SAMPLES 10  // number of samples to average
-#define REFRESH 3   // update interval (seconds)
+#define REFRESH 90  // update interval = (seconds) * REFRESH * SAMPLES 9 (15 minutes)
 
-#define TEMP_UP 6    // turn on temperature
+#define TEMP_UP 8    // turn on temperature
 #define TEMP_DOWN 4  // turn off temperature
 
 bool run = false;  // enable control after full samples buffer
